@@ -67,7 +67,7 @@ Before you get started, please take a few minutes and get acquainted with this a
 <ProductContext.Provider value={{ products, addItem }}>
 ```
 
--[] Now that we're providing our products state and addItem function we can refactor our products route to no longer use render props.
+-[x] Now that we're providing our products state and addItem function we can refactor our products route to no longer use render props.
 
 **Before**
 
@@ -89,33 +89,33 @@ Before you get started, please take a few minutes and get acquainted with this a
 
 **STEP 3 - Consuming data with ProductContext**
 
--[] Now that our `ProductContext` is now providing data we can finally consume it! To do so let's head over to our `Products` component and import the `useContext` hook as well as our `ProductContext`.
+-[x] Now that our `ProductContext` is now providing data we can finally consume it! To do so let's head over to our `Products` component and import the `useContext` hook as well as our `ProductContext`.
 
--[] In the component, call the `useContext` hook and pass in the context object we want to use into it.
+-[x] In the component, call the `useContext` hook and pass in the context object we want to use into it.
 
--[] When we do this, `useContext` is going to return value passed by our `ProductContext` Provider `value` prop. In our case we're getting back an object with two properties. A `products` property and a `addItem` property. We can go ahead and destructure those.
+-[x] When we do this, `useContext` is going to return value passed by our `ProductContext` Provider `value` prop. In our case we're getting back an object with two properties. A `products` property and a `addItem` property. We can go ahead and destructure those.
 
 ```js
 const { products, addItem } = useContext(ProductContext);
 ```
 
--[] Now that we have all of the data we need we can refactor our `Products` component from using props.
+-[x] Now that we have all of the data we need we can refactor our `Products` component from using props.
 
--[] To do so we just need to remove every instance of `props`.
+-[x] To do so we just need to remove every instance of `props`.
 
   - Remove it from the function parameters
   - Remove it from the products map
   - Remove it from addItem prop
 
-- Now our `Products` component is getting it's data solely from `Context API` 😃.
+-[x] Now our `Products` component is getting it's data solely from `Context API` 😃.
 
 **STEP 4 - Create the CartContext**
 
-- Now that we have refactored our `Products` component to utilize `Context API` let's refactor our `Cart` and `Navigation` Component to use `Context API` as well.
+-[] Now that we have refactored our `Products` component to utilize `Context API` let's refactor our `Cart` and `Navigation` Component to use `Context API` as well.
 
-- To start create a new file in our contexts folder named `CartContext.js`, this context is going to be utilized by our `ShoppingCart` and `Navigation` component.
+-[] To start create a new file in our contexts folder named `CartContext.js`, this context is going to be utilized by our `ShoppingCart` and `Navigation` component.
 
-- Inside of our new `CartContext` import `createContext` and create a new context named `CartContext`.
+-[] Inside of our new `CartContext` import `createContext` and create a new context named `CartContext`.
 
 **STEP 5 - Providing data with CartContext**
 
